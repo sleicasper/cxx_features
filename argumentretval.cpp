@@ -18,12 +18,12 @@ public:
 	{
 		ident = gident ++;
 		x = 0;
-		cout << "ident = " << ident  << endl;
+		cout << "calling constructor, ident = " << ident  << endl;
 	};
 	parent(int nx):x(nx)
 	{
 		ident = gident ++;
-		cout << "ident = " << ident  << endl;
+		cout << "calling constructor, ident = " << ident  << endl;
 	};
 	int getx()
 	{

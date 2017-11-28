@@ -16,12 +16,12 @@ public:
 	{
 		ident = gident ++;
 		x = 0;
-		cout << "ident = " << ident  << endl;
+		cout << "calling constructor, ident = " << ident  << endl;
 	};
 	parent(int nx):x(nx)
 	{
 		ident = gident ++;
-		cout << "ident = " << ident  << endl;
+		cout << "calling constructor, ident = " << ident  << endl;
 	};
 	int getx()
 	{
@@ -71,10 +71,27 @@ public:
 		this->x = aI;
 		return *this;
 	};
+	parent& operator=(double aD)
+	{
+		cout << "calling overrided assignment operator | parent& operator=(const double aD) | " << endl;
+		ident = gident ++;
+		this->x = (int)aD;
+		return *this;
+	};
 private:
 	int x;
 	int ident;
+	double j0;
 };
+
+parent f0()
+{
+	return parent(2333);
+}
+double f1()
+{
+	return 6666.0;
+}
 
 
 int main()
@@ -92,11 +109,19 @@ int main()
 	cout << endl << "assign instance allocated on stack to p0" << endl;
 	p0 = p1;
 
-	cout << endl << "assign instance allocated on heap to p8" << endl;
+	cout << endl << "assign instance allocated on heap to p0" << endl;
 	p0 = *ptr;
 
-	cout << endl << "assign immediate integer to p8" << endl;
+	cout << endl << "assign immediate integer to p0" << endl;
 	p0 = 2333;
+
+	cout << endl << "assign return value to p3" << endl;
+	parent p3 = f0();
+
+	cout << endl << "assign double number to p0" << endl;
+	p0 = 66666.6;
+
+
 
 	cout << endl;
 	delete ptr;
