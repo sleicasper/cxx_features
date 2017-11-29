@@ -8,6 +8,7 @@ testobjs = \
 	stackalloc \
 	operatoroverride \
 	vt \
+	constructor \
 	multivt 
 
 
