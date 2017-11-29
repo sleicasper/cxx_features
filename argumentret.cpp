@@ -50,36 +50,49 @@ private:
 	int ident;
 };
 
-base retbase()
+
+
+base retnormal()
 {
 	return base(5);
 }
+base& retreference()
+{
+	cout << "you can't return a reference of stack object" << endl;
+	int x;
+	x/0;
+	base tmp = base(5);
+	return tmp;
+}
 
+
+void passclass(base obj)
+{
+	obj.getx();
+}
+void passreference(base& obj)
+{
+	obj.getx();
+}
 
 
 int main()
 {
 	cout << "-------------------" << "constructor test" << "-------------------" << endl;
-	cout << endl << "calling zero parameter constructor | base() |" << endl;
-	base c0;
+	cout << endl << "[+] assign integer to a class" << endl;
+	base c0 = 0;
 
-	cout << endl << "calling one parameter constructor | base(int) |" << endl;
-	base c1(1);
+	cout << endl << "[+] pass class to a function receive normal object" << endl;
+	passclass(c0);
 
-	cout << endl << "calling one parameter constructor | base(int) |, another form" << endl;
-	base c2 = 2;
+	cout << endl << "[+] pass class to a function receive reference object" << endl;
+	passreference(c0);
 
-	cout << endl << "calling copy constructor" << endl;
-	base c3(c1);
+	cout << endl << "[+] return normal object" << endl;
+	retnormal();
 
-	cout << endl << "calling copy constructor, another form" << endl;
-	base c4 = c1;
-
-	cout << endl << "calling overrided assignment operator constructor" << endl;
-	c4 = c2;
-
-	cout << endl << "calling |retbase()|" << endl;
-	base c5 = retbase();
+	cout << endl << "[+] return normal object and assign it to an object" << endl;
+	base c1 = retnormal();
 
 	cout << endl;
 }

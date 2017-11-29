@@ -56,30 +56,37 @@ base retbase()
 }
 
 
+void passclass(base obj)
+{
+	obj.getx();
+}
+void passrvalue(base&& obj)
+{
+	obj.getx();
+}
+
 
 int main()
 {
 	cout << "-------------------" << "constructor test" << "-------------------" << endl;
-	cout << endl << "calling zero parameter constructor | base() |" << endl;
-	base c0;
+	cout << endl << "[+] assign integer to a class" << endl;
+	base c0 = 0;
 
-	cout << endl << "calling one parameter constructor | base(int) |" << endl;
-	base c1(1);
+	cout << endl << "[+] assign integer to a rvalue class" << endl;
+	base &&c1 = 1;
 
-	cout << endl << "calling one parameter constructor | base(int) |, another form" << endl;
-	base c2 = 2;
+	cout << endl << "[+] assign return value to a normal class" << endl;
+	base c2 = retbase();
 
-	cout << endl << "calling copy constructor" << endl;
-	base c3(c1);
+	cout << endl << "[+] assign return value to a rvalue class" << endl;
+	base &&c3 = retbase();
 
-	cout << endl << "calling copy constructor, another form" << endl;
-	base c4 = c1;
+	cout << endl << "[+] pass normal class to a function" << endl;
+	passclass(c0);
 
-	cout << endl << "calling overrided assignment operator constructor" << endl;
-	c4 = c2;
+	cout << endl << "[+] pass rvalue class to a function" << endl;
+	passrvalue( retbase() );
 
-	cout << endl << "calling |retbase()|" << endl;
-	base c5 = retbase();
 
 	cout << endl;
 }

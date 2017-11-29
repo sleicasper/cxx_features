@@ -2,20 +2,20 @@ CXX = g++
 
 
 testobjs = \
-	argumentretval \
-	argumentretval \
+	argumentret \
 	heapalloc \
 	stackalloc \
 	operatoroverride \
 	vt \
 	constructor \
+	rvalue \
 	multivt 
 
 
 all:
 	@for target in $(testobjs); 	\
 	do				\
-		$(CXX) -o $$target $$target.cpp;	\
+		$(CXX) -std=c++11 -fno-elide-constructors -o $$target $$target.cpp;	\
 	done
 
 dbg:
