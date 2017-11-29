@@ -60,9 +60,18 @@ void passclass(base obj)
 {
 	obj.getx();
 }
+void passclassandaccessit(base obj)
+{
+	base st = obj;
+}
 void passrvalue(base&& obj)
 {
 	obj.getx();
+}
+
+void passrvalueandaccessit(base&& obj)
+{
+	base sv = obj;
 }
 
 
@@ -81,12 +90,18 @@ int main()
 	cout << endl << "[+] assign return value to a rvalue class" << endl;
 	base &&c3 = retbase();
 
+
 	cout << endl << "[+] pass normal class to a function" << endl;
 	passclass(c0);
+
+	cout << endl << "[+] pass normal class to a function and access it" << endl;
+	passclassandaccessit(c0);
 
 	cout << endl << "[+] pass rvalue class to a function" << endl;
 	passrvalue( retbase() );
 
+	cout << endl << "[+] pass rvalue class to a function and access it" << endl;
+	passrvalueandaccessit( retbase() );
 
 	cout << endl;
 }

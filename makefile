@@ -21,13 +21,13 @@ all:
 dbg:
 	@for target in $(testobjs); 	\
 	do				\
-		$(CXX) -g -o $$target $$target.cpp;	\
+		$(CXX) -std=c++11 -g -o $$target $$target.cpp;	\
 	done
 
 sec:
 	@for target in $(testobjs); 	\
 	do				\
-		$(CXX) -g -fsanitize=address -o $$target $$target.cpp;	\
+		$(CXX) -std=c++11 -g -fsanitize=address -o $$target $$target.cpp;	\
 	done
 
 
