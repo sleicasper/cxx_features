@@ -9,6 +9,7 @@ testobjs = \
 	vt \
 	constructor \
 	rvalue \
+	cxxnew \
 	multivt 
 
 
