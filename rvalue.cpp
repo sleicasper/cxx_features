@@ -103,6 +103,7 @@ int main()
 	cout << endl << "[+] pass rvalue class to a function and access it" << endl;
 	passrvalueandaccessit( retbase() );
 
-	cout << endl;
+
+	cout << "-------------------" << "end of main" << "-------------------" << endl;
 }
 

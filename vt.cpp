@@ -112,6 +112,7 @@ int main()
 	cout << "call |saybye()|" << endl;
 	ptr1->saybye();
 
-	cout << endl;
+
+	cout << "-------------------" << "end of main" << "-------------------" << endl;
 }
 

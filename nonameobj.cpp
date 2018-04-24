@@ -60,27 +60,8 @@ base retbase()
 int main()
 {
 	cout << "-------------------" << "constructor test" << "-------------------" << endl;
-	cout << endl << "[+] calling zero parameter constructor | base() |" << endl;
-	base c0;
-
 	cout << endl << "[+] calling one parameter constructor | base(int) |" << endl;
-	base c1(1);
-
-	cout << endl << "[+] calling one parameter constructor | base(int) |, another form" << endl;
-	base c2 = 2;
-
-	cout << endl << "[+] calling copy constructor" << endl;
-	base c3(c1);
-
-	cout << endl << "[+] calling copy constructor, another form" << endl;
-	base c4 = c1;
-
-	cout << endl << "[+] calling overrided assignment operator constructor" << endl;
-	c4 = c2;
-
-	cout << endl << "[+] calling |retbase()|" << endl;
-	base c5 = retbase();
-
+	base(1);
 	cout << "-------------------" << "end of main" << "-------------------" << endl;
 }
 

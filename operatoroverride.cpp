@@ -125,5 +125,7 @@ int main()
 
 	cout << endl;
 	delete ptr;
+
+	cout << "-------------------" << "end of main" << "-------------------" << endl;
 }
 

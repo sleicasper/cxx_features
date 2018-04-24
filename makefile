@@ -9,6 +9,8 @@ testobjs = \
 	vt \
 	constructor \
 	rvalue \
+	nonameobj \
+	newobjectinargument \
 	multivt 
 
 

@@ -146,6 +146,7 @@ int main()
 	cout << "call |sayhello_onlyderived()|" << endl;
 	ptr2->sayhello_onlyderived();
 
-	cout << endl;
+
+	cout << "-------------------" << "end of main" << "-------------------" << endl;
 }
 

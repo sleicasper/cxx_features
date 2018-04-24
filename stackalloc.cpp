@@ -70,6 +70,7 @@ int main()
 	cout << endl << "calling return instance function" << endl;
 	cout << "it would pass p4 address quitely to contructor" << endl;
 	parent p4 = hookretparent();
-	cout << endl;
+
+	cout << "-------------------" << "end of main" << "-------------------" << endl;
 }
 

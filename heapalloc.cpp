@@ -57,6 +57,8 @@ int main()
 	delete p0;
 	delete p1;
 	delete p2;
+
+	cout << "-------------------" << "end of main" << "-------------------" << endl;
 }
 
 

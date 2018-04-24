@@ -94,6 +94,7 @@ int main()
 	cout << endl << "[+] return normal object and assign it to an object" << endl;
 	base c1 = retnormal();
 
-	cout << endl;
+
+	cout << "-------------------" << "end of main" << "-------------------" << endl;
 }
 
