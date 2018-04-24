@@ -9,12 +9,9 @@ testobjs = \
 	vt \
 	constructor \
 	rvalue \
-<<<<<<< HEAD
 	nonameobj \
 	newobjectinargument \
-=======
 	cxxnew \
->>>>>>> origin/master
 	multivt 
 
 
